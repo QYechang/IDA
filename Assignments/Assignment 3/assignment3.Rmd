@@ -347,7 +347,15 @@ hd.pca <- prcomp(hd,scale = TRUE)
 plot(hd.pca)
 ```
 
-The scree plot shows that there is a lot of information stored in that first principle component.  Let's look at the vectors and see what contributes the most to the principle components.
+The plot shows that the first few principal components explain a large portion of the variance.
+
+PC1: Focuses on property size and overall quality features like the number of floors, the size of the garage, and the overall quality of the house.
+
+PC2: Likely reflects the age and remodel aspects of the house, as it is influenced by variables such as age and ageSinceRemodel.
+
+Other components: Capture smaller variations, but still significant, related to more nuanced characteristics such as lot size and specific areas like basement finishes or features like porches.
+
+Let's look at the vectors and see what contributes the most to the principle components.
 
 ```{r}
 autoplot(hd.pca, data = hd, 
