@@ -533,15 +533,15 @@ cat("R-squared: ", r2_value, "\n")
 
 
 ## Summary of Model Performance
-```{r,include = TRUE}
+```{r}
 df <- data.frame(
   Model = c("OLS", "Logistic", "lasso", "PLS"),
   Method = c("lm", "glm", "glmnet", "plsr"),
   Package = c("stats", "stats", "glmnet", "pls"),
   Hyperparameter = c("N/A", "N/A", "\\lambda", "ncomp"),
   Value = c("N/A", "N/A", "0.0015", "6"),
-  RMSE = c("112", "N/A", "1.46", "1.18"),
-  R2 = c("-0.275", "N/A", "0.484", "0.664")
+  RMSE = c("112", "N/A", "1.46", "1.64"),
+  R2 = c("-0.275", "N/A", "0.484", "0.348")
 )
 ```
 ```{r,include = TRUE}
